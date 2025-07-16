@@ -1,0 +1,15 @@
+// compile.do - Batch compile for all SV files in ModelSim
+
+vlog ../src/async_fifo.sv
+vlog ../src/host_interface.sv
+vlog ../src/RX_streaming_packet_detector.sv
+vlog ../src/top_module_final.sv
+
+vlog tb_async_fifo.sv
+vlog tb_host_interface.sv
+vlog tb_streaming_detector.sv
+vlog tb_topmodule.sv
+
+vsim tb_topmodule
+add wave *
+run -all

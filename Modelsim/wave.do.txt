@@ -1,0 +1,7 @@
+// Run simulation interactively
+
+vsim tb_topmodule
+add wave -r *
+run -all
+
+//vsim -do wave_run.do
